@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
   ru: {
     brand: "Название сайта",
     introText:
@@ -6,6 +6,8 @@ const translations = {
     aboutTitle: "Обо мне",
     aboutText:
       "Тут в дальнейшем будет описание обо мне. Этот блок можно сделать длинным: он занимает почти весь экран и спокойно уходит ниже первого фото.",
+    aboutContinue:
+      "Продолжение описания можно расположить здесь: подробнее рассказать об опыте, подходе к работе, интересах и том, чем я могу быть полезен.",
     photoOne: "Мое фото",
     photoTwo: "Мое фото №2",
     servicesKicker: "Что можно заказать",
@@ -33,6 +35,8 @@ const translations = {
     aboutTitle: "About me",
     aboutText:
       "There will be a description about me here later. This block can be long: it takes almost the whole screen and continues below the first photo.",
+    aboutContinue:
+      "The continuation can live here: experience, working style, interests, and how I can be useful.",
     photoOne: "My photo",
     photoTwo: "My photo #2",
     servicesKicker: "What you can order",
@@ -55,8 +59,14 @@ const translations = {
   },
 };
 
+const header = document.querySelector(".site-header");
+const introInner = document.querySelector(".intro-inner");
+const introTitle = document.querySelector(".intro-title");
+const introText = document.querySelector(".intro-text");
+const emailTrigger = document.querySelector(".email-trigger");
 const langButtons = document.querySelectorAll(".lang-button");
 const translatableElements = document.querySelectorAll("[data-i18n]");
+const revealElements = document.querySelectorAll(".reveal-from-left, .reveal-from-right");
 
 function setLanguage(language) {
   document.documentElement.lang = language;
@@ -71,10 +81,81 @@ function setLanguage(language) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  replayIntroAnimation();
 }
+
+function updateHeaderState() {
+  header.classList.toggle("is-scrolled", window.scrollY > 8);
+}
+
+function updateIntroScrollState() {
+  const fadeDistance = Math.max(window.innerHeight * 0.48, 260);
+  const progress = Math.min(window.scrollY / fadeDistance, 1);
+  const opacity = Math.max(1 - progress * 1.25, 0);
+  const offset = `${progress * -42}px`;
+
+  introInner.style.setProperty("--intro-opacity", opacity.toFixed(3));
+  introInner.style.setProperty("--intro-offset", offset);
+}
+
+function replayIntroAnimation() {
+  [introTitle, introText].forEach((element) => {
+    element.classList.remove("is-replaying");
+    element.classList.add("replay-float");
+  });
+
+  requestAnimationFrame(() => {
+    [introTitle, introText].forEach((element) => {
+      element.classList.add("is-replaying");
+    });
+  });
+}
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.22 }
+);
 
 langButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
+emailTrigger.addEventListener("click", async () => {
+  emailTrigger.classList.toggle("is-open");
+
+  try {
+    await navigator.clipboard.writeText(emailTrigger.dataset.email);
+  } catch {
+    // Clipboard can be unavailable when the page is opened directly from a file.
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!emailTrigger.contains(event.target)) {
+    emailTrigger.classList.remove("is-open");
+  }
+});
+
+revealElements.forEach((element) => revealObserver.observe(element));
+window.addEventListener(
+  "scroll",
+  () => {
+    updateHeaderState();
+    updateIntroScrollState();
+  },
+  { passive: true }
+);
+window.addEventListener("resize", updateIntroScrollState);
+
 setLanguage("ru");
+updateHeaderState();
+updateIntroScrollState();
+
