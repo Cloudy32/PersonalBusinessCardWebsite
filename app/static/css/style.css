@@ -264,11 +264,11 @@ button {
 
 .photo-panel-secondary {
   position: absolute;
-  right: clamp(0px, calc((100vw - 1500px) * 0.75 + 18px), 300px);
-  bottom: clamp(34px, 5vw, 68px);
+  right: clamp(28px, 4vw, 64px);
+  bottom: calc(clamp(72px, 7vw, 104px) - 20px);
   z-index: 2;
-  width: min(34vw, 460px);
-  height: min(34vh, 320px);
+  width: min(34vw, 500px);
+  height: min(34vh, 330px);
 }
 
 .about-copy {
@@ -307,7 +307,7 @@ button {
   display: grid;
   grid-template-columns: minmax(360px, var(--about-photo-column)) minmax(0, 1fr);
   column-gap: var(--about-photo-gap);
-  row-gap: 10px;
+  row-gap: 8px;
   max-width: none;
   margin-top: clamp(28px, 4vw, 48px);
 }
@@ -319,9 +319,9 @@ button {
 .about-text-under {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: clamp(24px, 4vw, 52px);
-  row-gap: 10px;
+  grid-template-columns: minmax(0, calc(100% - min(31vw, 430px) - clamp(112px, 11vw, 160px))) minmax(min(31vw, 430px), 1fr);
+  column-gap: clamp(20px, 3vw, 42px);
+  row-gap: 8px;
 }
 
 .about-text-main p {
@@ -333,21 +333,38 @@ button {
   margin-top: clamp(20px, 3vh, 34px);
 }
 
-.about-text-under [data-i18n="aboutMeaning"],
-.about-text-under [data-i18n="aboutStackIntro"] {
+.about-text-under [data-i18n="aboutMeaning"] {
   grid-column: 1 / -1;
+}
+
+.about-text-under [data-i18n="aboutStackIntro"] {
+  grid-column: 1;
+  width: 100%;
 }
 
 .about-text-under .about-stack {
   grid-column: 1;
+  width: 100%;
 }
 
+.about-text-under [data-i18n="aboutStackIntro"],
 .about-text-under [data-i18n="aboutFrontend"],
 .about-text-under [data-i18n="aboutSearch"],
 .about-text-under [data-i18n="aboutOutro"] {
   grid-column: 1;
+  width: 100%;
   max-width: none;
   margin-left: 0;
+}
+
+.about-text-under .about-stack,
+.about-text-under [data-i18n="aboutStackIntro"],
+.about-text-under [data-i18n="aboutFrontend"],
+.about-text-under [data-i18n="aboutSearch"],
+.about-text-under [data-i18n="aboutOutro"] {
+  font-size: clamp(0.98rem, 1.28vw, 1.14rem);
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .about-copy p {
@@ -357,7 +374,7 @@ button {
   font-family: "Manrope", "Segoe UI", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.54;
+  line-height: 1.49;
 }
 
 .about-copy p + p {
@@ -377,7 +394,7 @@ button {
   color: var(--green);
   background: rgba(250, 249, 247, 0.66);
   box-shadow: inset 0 0 0 1px rgba(38, 75, 50, 0.1);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .photo-panel img {
@@ -442,11 +459,11 @@ button {
 }
 
 .photo-callout-right {
-  left: 18px;
+  left: calc(clamp(-210px, -13vw, -150px) + 50px);
   right: auto;
-  bottom: auto;
-  top: 14px;
-  transform: rotate(3deg) scale(0.78);
+  bottom: calc(clamp(22px, 3vw, 42px) - 40px);
+  top: auto;
+  transform: rotate(-26deg) scale(0.72);
   transform-origin: left top;
 }
 
@@ -783,6 +800,25 @@ button {
     min-height: 42vh;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

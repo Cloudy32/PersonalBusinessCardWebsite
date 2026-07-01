@@ -1,6 +1,6 @@
 ﻿const translations = {
   ru: {
-    brand: "Название сайта",
+    brand: "RB.code",
     introText:
       "Привет, ты попал на мой личный сайт-визитку. Тут ты сможешь ознакомиться со мной, моими услугами, проектами и надеюсь тебе понравиться.",
     aboutTitle: "Обо мне",
@@ -101,7 +101,7 @@
     projectLink: "Открыть проект",
   },
   en: {
-    brand: "Site name",
+    brand: "RB.code",
     introText:
       "Hi, you are on my personal business card website. Here you can learn about me, my services, projects, and I hope you will enjoy it.",
     aboutTitle: "About me",
@@ -302,6 +302,7 @@ window.addEventListener("resize", updateIntroScrollState);
 setLanguage("ru");
 updateHeaderState();
 updateIntroScrollState();
+
 
 
 
