@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700;7..72,800&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../static/css/style.css?v=13" />
+    <link rel="stylesheet" href="../static/css/style.css?v=38" />
   </head>
   <body>
     <header class="site-header" aria-label="Верхняя панель">
@@ -68,16 +68,31 @@
           <div class="photo-callout photo-callout-left" aria-hidden="true">
             <span>Это я</span>
             <svg viewBox="0 0 150 100">
-              <path d="M18 84C52 58 82 42 130 24" />
-              <path d="M130 24 108 18" />
-              <path d="M130 24 118 46" />
+              <path d="M132 28C98 44 58 62 18 82" />
+              <path d="M18 82 42 86" />
+              <path d="M18 82 28 59" />
             </svg>
           </div>
         </div>
 
         <article class="about-copy reveal-from-right">
           <h2 data-i18n="aboutTitle">Обо мне</h2>
-          <p data-i18n="aboutText">Тут в дальнейшем будет описание обо мне. Этот блок можно сделать длинным: он занимает почти весь экран и спокойно уходит ниже первого фото.</p>
+          <div class="about-text">
+            <div class="about-text-main">
+              <p class="about-lead" data-i18n="aboutIntro">Привет! Меня зовут Рома 👋</p>
+              <p data-i18n="aboutOrigin">Я родился на севере России, в ХМАО — Ханты-Мансийском автономном округе. Сейчас мне 23 года, и я живу в более тёплой части России — в городе Брянск.</p>
+              <p data-i18n="aboutDeveloperPath">Уже 3,5 года я развиваюсь как Python Backend Developer. Сейчас я двигаюсь дальше не только как человек, который пишет код, а как личностный разработчик: создаю свои проекты, развиваю портфолио, делюсь опытом и выстраиваю вокруг себя профессиональный путь.</p>
+              <p data-i18n="aboutStart">Мой путь в IT начался не сразу с разработки. Около 5 лет назад я работал в небольшой брянской компании и занимался заполнением Google Таблиц. В какой-то момент мне захотелось упростить рутинную работу и избавиться от постоянного ручного труда. Именно тогда я впервые заинтересовался автоматизацией и постепенно пришёл к программированию.</p>
+            </div>
+            <div class="about-text-under">
+              <p data-i18n="aboutMeaning">Со временем я понял, что разработка — это не просто “писать строчки кода” или нажимать кнопки. Для меня это возможность создавать полезные инструменты, упрощать жизнь людям и строить новые цифровые решения вокруг себя 🚀</p>
+              <p data-i18n="aboutStackIntro">За это время я успел поработать с разными задачами и технологиями. Изначально мой стек был довольно простым: Python, ООП и Pandas. Сейчас мой основной стек выглядит так:</p>
+              <p class="about-stack" data-i18n="aboutStack">Python 3.12+, FastAPI, SQL, SQLAlchemy, Alembic, Redis, RabbitMQ, Celery, Git, CI/CD, а также библиотеки и фреймворки под конкретные задачи.</p>
+              <p data-i18n="aboutFrontend">Также я немного развиваюсь во frontend-разработке — этот сайт является одним из примеров такого опыта.</p>
+              <p data-i18n="aboutSearch">Сейчас я активно ищу работу на позицию Middle Python Backend Developer и открыт к интересным предложениям. Мои контакты для связи указаны выше 📩</p>
+              <p data-i18n="aboutOutro">Ниже вы можете ознакомиться с моими проектами, портфолио и списком услуг, которые я предоставляю.</p>
+            </div>
+          </div>
         </article>
 
         <div class="photo-panel photo-panel-secondary reveal-from-left">
@@ -93,28 +108,6 @@
         </div>
       </section>
 
-      <section class="work-section" id="services">
-        <div class="section-heading">
-          <span data-i18n="servicesKicker">Что можно заказать</span>
-          <h2 data-i18n="servicesTitle">Услуги</h2>
-        </div>
-
-        <div class="soft-grid">
-          <article class="soft-card">
-            <h3 data-i18n="serviceOneTitle">Frontend разработка</h3>
-            <p data-i18n="serviceOneText">Адаптивные страницы, чистая верстка и аккуратная структура интерфейса.</p>
-          </article>
-          <article class="soft-card">
-            <h3 data-i18n="serviceTwoTitle">UI доработка</h3>
-            <p data-i18n="serviceTwoText">Обновление визуального стиля, сеток, карточек и мобильных состояний.</p>
-          </article>
-          <article class="soft-card">
-            <h3 data-i18n="serviceThreeTitle">Лендинг</h3>
-            <p data-i18n="serviceThreeText">Одностраничный сайт под услугу, продукт или личную визитку.</p>
-          </article>
-        </div>
-      </section>
-
       <section class="work-section" id="projects">
         <div class="section-heading">
           <span data-i18n="projectsKicker">Мои работы</span>
@@ -123,27 +116,173 @@
 
         <div class="soft-grid projects-grid">
           <article class="soft-card project-card">
-            <h3 data-i18n="projectOneTitle">Название проекта</h3>
-            <p data-i18n="projectOneText">Короткое описание результата, роли и ценности проекта.</p>
-            <a href="#" data-i18n="projectLink">Ссылка</a>
+            <div class="project-card-head">
+              <h3 data-i18n="projectOneTitle">Looking For Restaurants (LFRest)</h3>
+              <span class="project-status" data-i18n="projectOneStatus">В разработке</span>
+            </div>
+            <p data-i18n="projectOneText">Сервис для поиска ресторанов по предпочтениям пользователя с ИИ-ассистентом. Архитектура разделена на слои API, бота, сервисов и базы данных, поэтому это заготовка под продукт, который можно расширять до каталога, рекомендаций, бронирований или рекламной платформы для заведений.</p>
+            <a href="https://github.com/Cloudy32/RestaurantSearch" target="_blank" rel="noreferrer" data-i18n="projectLink">Открыть проект</a>
           </article>
           <article class="soft-card project-card">
-            <h3 data-i18n="projectTwoTitle">Сервисная страница</h3>
-            <p data-i18n="projectTwoText">Карточки услуг, понятная структура и спокойный визуальный ритм.</p>
-            <a href="#" data-i18n="projectLink">Ссылка</a>
+            <h3 data-i18n="projectTwoTitle">News Bot</h3>
+            <p data-i18n="projectTwoText">Telegram-бот для автоматической подборки новостей по интересам пользователя. Он собирает материалы из RSS-источников, сохраняет их в базу данных и может развиваться в персональные дайджесты, AI-саммаризацию, автопостинг и подписочную модель для медиа или тематических сообществ.</p>
+            <a href="https://github.com/Cloudy32/Bot_News" target="_blank" rel="noreferrer" data-i18n="projectLink">Открыть проект</a>
           </article>
           <article class="soft-card project-card">
-            <h3 data-i18n="projectThreeTitle">Портфолио</h3>
-            <p data-i18n="projectThreeText">Личный сайт с описанием, услугами и подборкой работ.</p>
-            <a href="#" data-i18n="projectLink">Ссылка</a>
+            <h3 data-i18n="projectThreeTitle">Linkcuts</h3>
+            <p data-i18n="projectThreeText">Простой сервис для сокращения длинных ссылок: он делает URL удобными для соцсетей, рекламы, презентаций и рассылок. Проект подходит как основа для аналога Bitly со статистикой переходов, QR-кодами, кастомными ссылками, аналитикой кампаний и тарифами.</p>
+            <a href="https://github.com/Cloudy32/linkCutter" target="_blank" rel="noreferrer" data-i18n="projectLink">Открыть проект</a>
+          </article>
+          <article class="soft-card project-card">
+            <h3 data-i18n="projectFourTitle">My Neighbor</h3>
+            <p data-i18n="projectFourText">Telegram-бот для поиска сожителей и людей для совместной аренды жилья. Он закрывает понятную бытовую задачу и может вырасти в платформу с анкетами, фильтрами по городу, бюджету, привычкам, району и предпочтениям для студентов и молодых специалистов.</p>
+            <a href="https://github.com/Cloudy32/BotForNeigbhor" target="_blank" rel="noreferrer" data-i18n="projectLink">Открыть проект</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-section" id="services">
+        <div class="section-heading">
+          <span data-i18n="servicesKicker">Что можно заказать</span>
+          <h2 data-i18n="servicesTitle">Услуги</h2>
+        </div>
+
+        <div class="soft-grid services-grid">
+          <article class="soft-card service-card">
+            <h3 data-i18n="serviceOneTitle">Разработка Telegram-ботов</h3>
+            <p data-i18n="serviceOneText">Создаю Telegram-ботов под разные задачи: от простых чат-ботов с меню до сервисов с базой данных, заявками, рассылками и бизнес-логикой.</p>
+            <div class="service-options">
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceOneOptionOneTitle">Простой чат-бот</h4>
+                  <span data-i18n="serviceOneOptionOnePrice">от 1 000 ₽ до 3 000 ₽</span>
+                </div>
+                <p data-i18n="serviceOneOptionOneText">Меню, ответы на частые вопросы, простая навигация, приветственные сообщения, кнопки и базовая логика общения.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceOneOptionTwoTitle">Бот с ИИ-ассистентом</h4>
+                  <span data-i18n="serviceOneOptionTwoPrice">от 10 000 ₽ до 15 000 ₽</span>
+                </div>
+                <p data-i18n="serviceOneOptionTwoText">Бот с подключением ИИ для ответов на вопросы, консультаций, обработки текстовых запросов и роли виртуального помощника.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceOneOptionThreeTitle">Сервис-бот</h4>
+                  <span data-i18n="serviceOneOptionThreePrice">от 15 000 ₽ до 25 000 ₽</span>
+                </div>
+                <p data-i18n="serviceOneOptionThreeText">База данных, анкеты, заявки, фильтры, пользовательские сценарии, уведомления, рассылки и интеграции.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceOneOptionFourTitle">Telegram-бот под ключ</h4>
+                  <span data-i18n="serviceOneOptionFourPrice">договорная, минимум от 10 000 ₽</span>
+                </div>
+                <p data-i18n="serviceOneOptionFourText">Полная разработка под идею: обсуждение задачи, проектирование логики, реализация, настройка и подготовка к использованию.</p>
+              </div>
+            </div>
+          </article>
+          <article class="soft-card service-card">
+            <h3 data-i18n="serviceTwoTitle">Разработка API сервисов и приложений</h3>
+            <p data-i18n="serviceTwoText">Разрабатываю backend-сервисы, API и web-приложения на Python под задачи бизнеса, стартапов и внутренних процессов.</p>
+            <div class="service-options">
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceTwoOptionOneTitle">Простое API-приложение</h4>
+                  <span data-i18n="serviceTwoOptionOnePrice">от 5 000 ₽ до 15 000 ₽</span>
+                </div>
+                <p data-i18n="serviceTwoOptionOneText">Базовые endpoints, обработка запросов, простая логика, подключение к базе данных или обмен данными между сервисами.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceTwoOptionTwoTitle">API с базой данных и бизнес-логикой</h4>
+                  <span data-i18n="serviceTwoOptionTwoPrice">от 15 000 ₽ до 30 000 ₽</span>
+                </div>
+                <p data-i18n="serviceTwoOptionTwoText">Хранение данных, структурированная архитектура, CRUD, валидация, миграции и логика для дальнейшего развития проекта.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceTwoOptionThreeTitle">Интеграция со сторонними сервисами</h4>
+                  <span data-i18n="serviceTwoOptionThreePrice">от 10 000 ₽ до 25 000 ₽</span>
+                </div>
+                <p data-i18n="serviceTwoOptionThreeText">Подключение внешних API, платежей, Telegram, CRM, Google Sheets, OpenAI/ИИ-сервисов, парсеров и уведомлений.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceTwoOptionFourTitle">Backend-приложение под ключ</h4>
+                  <span data-i18n="serviceTwoOptionFourPrice">договорная, минимум от 25 000 ₽</span>
+                </div>
+                <p data-i18n="serviceTwoOptionFourText">Архитектура, API, база данных, бизнес-логика, Docker, миграции, интеграции и подготовка приложения к запуску.</p>
+              </div>
+            </div>
+            <p class="service-note" data-i18n="serviceTwoNote">Цена зависит от сложности проекта, количества функций, интеграций, сроков и требований к реализации.</p>
+          </article>
+          <article class="soft-card service-card">
+            <h3 data-i18n="serviceThreeTitle">Разработка лендингов и web-платформ</h3>
+            <p data-i18n="serviceThreeText">Создаю современные лендинги и web-платформы для презентации услуг, сбора заявок, запуска продукта, личного бренда или проверки идеи через MVP.</p>
+            <div class="service-options">
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceThreeOptionOneTitle">Простой лендинг</h4>
+                  <span data-i18n="serviceThreeOptionOnePrice">от 3 000 ₽ до 10 000 ₽</span>
+                </div>
+                <p data-i18n="serviceThreeOptionOneText">Одностраничный сайт для услуги, продукта или личного бренда: главный экран, описание, преимущества, контакты и кнопки связи.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceThreeOptionTwoTitle">Лендинг с формами и интеграциями</h4>
+                  <span data-i18n="serviceThreeOptionTwoPrice">от 10 000 ₽ до 30 000 ₽</span>
+                </div>
+                <p data-i18n="serviceThreeOptionTwoText">Форма заявки, отправка в Telegram, интеграции с Google Sheets, CRM или email, мобильная адаптация, базовая SEO-структура и подготовка к запуску.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceThreeOptionThreeTitle">Web-платформа / MVP</h4>
+                  <span data-i18n="serviceThreeOptionThreePrice">от 30 000 ₽</span>
+                </div>
+                <p data-i18n="serviceThreeOptionThreeText">Каталог, личный кабинет, сервис заявок, мини CRM или MVP: backend на Python/FastAPI, база данных, авторизация, админка, API, Docker и интеграции.</p>
+              </div>
+              <div class="service-option">
+                <div class="service-option-head">
+                  <h4 data-i18n="serviceThreeOptionFourTitle">Сайт или платформа под ключ</h4>
+                  <span data-i18n="serviceThreeOptionFourPrice">договорная</span>
+                </div>
+                <p data-i18n="serviceThreeOptionFourText">Полная разработка проекта: от обсуждения идеи и структуры до реализации, настройки, запуска и подготовки к развитию.</p>
+              </div>
+            </div>
           </article>
         </div>
       </section>
     </main>
 
-    <script src="../static/js/main.js?v=10"></script>
+    <script src="../static/js/main.js?v=15"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
