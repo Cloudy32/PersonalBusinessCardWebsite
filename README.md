@@ -1,4 +1,6 @@
-# RB.code — personal business card website
+# RB.code — personal business card website  
+
+# Сам сайт: [клик](https://rbcoder.ru/)
 
 `RB.code` — личный сайт-визитка Бондаря Романа Михайловича, Python Backend Developer. Проект сделан как аккуратная frontend-страница для знакомства со мной, моими проектами, услугами и контактами.
 
