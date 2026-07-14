@@ -98,6 +98,9 @@
     projectFourTitle: "My Neighbor",
     projectFourText:
       "Telegram-бот для поиска сожителей и людей для совместной аренды жилья. Он закрывает понятную бытовую задачу и может вырасти в платформу с анкетами, фильтрами по городу, бюджету, привычкам, району и предпочтениям для студентов и молодых специалистов.",
+    projectFiveTitle: "Payment Service",
+    projectFiveText:
+      "Backend-сервис для асинхронной обработки платежей: он принимает платеж, сохраняет его состояние и проводит через очередь обработки с последующим webhook-уведомлением. Проект показывает, как можно выстроить надежный платежный сценарий с идемпотентностью, outbox-подходом, retry-механикой и DLQ. Его можно развивать в сторону интеграции с реальными платежными провайдерами, личного кабинета, истории операций, аналитики и полноценной панели управления платежами.",
     projectLink: "Открыть проект",
   },
   en: {
@@ -199,6 +202,9 @@
     projectFourTitle: "My Neighbor",
     projectFourText:
       "A Telegram bot for finding roommates and people for shared housing. It solves a clear everyday problem and can grow into a renter platform with profiles, city, budget, habit, district and preference filters.",
+    projectFiveTitle: "Payment Service",
+    projectFiveText:
+      "A backend service for asynchronous payment processing: it accepts a payment, stores its state and sends it through a processing queue with a webhook notification afterwards. The project shows how a reliable payment flow can be built with idempotency, the outbox pattern, retries and a DLQ. It can be developed further into integrations with real payment providers, an account area, operation history, analytics and a full payment management dashboard.",
     projectLink: "Open project",
   },
 };
@@ -302,6 +308,11 @@ window.addEventListener("resize", updateIntroScrollState);
 setLanguage("ru");
 updateHeaderState();
 updateIntroScrollState();
+
+
+
+
+
 
 
 
