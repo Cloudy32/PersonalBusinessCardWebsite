@@ -1,4 +1,4 @@
-﻿const translations = {
+const translations = {
   ru: {
     brand: "RB.code",
     introText:
@@ -68,15 +68,15 @@
     serviceThreeText:
       "Создаю современные лендинги и web-платформы для презентации услуг, сбора заявок, запуска продукта, личного бренда или проверки идеи через MVP.",
     serviceThreeOptionOneTitle: "Простой лендинг",
-    serviceThreeOptionOnePrice: "от 3 000 ₽ до 10 000 ₽",
+    serviceThreeOptionOnePrice: "от 10 000 ₽",
     serviceThreeOptionOneText:
       "Одностраничный сайт для услуги, продукта или личного бренда: главный экран, описание, преимущества, контакты и кнопки связи.",
     serviceThreeOptionTwoTitle: "Лендинг с формами и интеграциями",
-    serviceThreeOptionTwoPrice: "от 10 000 ₽ до 30 000 ₽",
+    serviceThreeOptionTwoPrice: "от 15 000 ₽ до 30 000 ₽",
     serviceThreeOptionTwoText:
       "Форма заявки, отправка в Telegram, интеграции с Google Sheets, CRM или email, мобильная адаптация, базовая SEO-структура и подготовка к запуску.",
     serviceThreeOptionThreeTitle: "Web-платформа / MVP",
-    serviceThreeOptionThreePrice: "от 30 000 ₽",
+    serviceThreeOptionThreePrice: "от 35 000 ₽",
     serviceThreeOptionThreeText:
       "Каталог, личный кабинет, сервис заявок, мини CRM или MVP: backend на Python/FastAPI, база данных, авторизация, админка, API, Docker и интеграции.",
     serviceThreeOptionFourTitle: "Сайт или платформа под ключ",
@@ -172,15 +172,15 @@
     serviceThreeText:
       "I create modern landing pages and web platforms for presenting services, collecting leads, launching products, personal brands or MVP testing.",
     serviceThreeOptionOneTitle: "Simple landing page",
-    serviceThreeOptionOnePrice: "from 3,000 ₽ to 10,000 ₽",
+    serviceThreeOptionOnePrice: "from 10,000 ₽",
     serviceThreeOptionOneText:
       "A one-page site for a service, product or personal brand: hero section, description, benefits, contacts and contact buttons.",
     serviceThreeOptionTwoTitle: "Landing page with forms and integrations",
-    serviceThreeOptionTwoPrice: "from 10,000 ₽ to 30,000 ₽",
+    serviceThreeOptionTwoPrice: "from 15,000 ₽ to 30,000 ₽",
     serviceThreeOptionTwoText:
       "Lead form, Telegram notifications, Google Sheets, CRM or email integrations, mobile adaptation, basic SEO structure and launch prep.",
     serviceThreeOptionThreeTitle: "Web platform / MVP",
-    serviceThreeOptionThreePrice: "from 30,000 ₽",
+    serviceThreeOptionThreePrice: "from 35,000 ₽",
     serviceThreeOptionThreeText:
       "Catalog, account area, request service, mini CRM or startup MVP: Python/FastAPI backend, database, auth, admin area, API, Docker and integrations.",
     serviceThreeOptionFourTitle: "Turnkey site or platform",
@@ -308,18 +308,3 @@ window.addEventListener("resize", updateIntroScrollState);
 setLanguage("ru");
 updateHeaderState();
 updateIntroScrollState();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
