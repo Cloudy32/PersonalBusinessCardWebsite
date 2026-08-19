@@ -526,6 +526,14 @@ button:focus-visible {
   margin-top: 28px;
 }
 
+.service-options-five {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-options-five .service-option:last-child {
+  grid-column: 1 / -1;
+}
+
 .service-option {
   padding: 22px;
   border-radius: 24px;
@@ -852,6 +860,14 @@ button:focus-visible {
 
   .projects-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-options-five {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-options-five .service-option:last-child {
+    grid-column: auto;
   }
 
   .section-heading {

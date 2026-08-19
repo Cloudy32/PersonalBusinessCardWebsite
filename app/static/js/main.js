@@ -83,6 +83,29 @@ const translations = {
     serviceThreeOptionFourPrice: "договорная",
     serviceThreeOptionFourText:
       "Полная разработка проекта: от обсуждения идеи и структуры до реализации, настройки, запуска и подготовки к развитию.",
+    serviceFourTitle: "Запуск и сопровождение проектов",
+    serviceFourText:
+      "Помогаю не только разработать проект, но и довести его до стабильного запуска: размещу сайт или бота на сервере, возьму на сопровождение либо подключусь к доработке уже работающего решения. Вы получаете готовый к использованию проект и техническую поддержку без необходимости самостоятельно разбираться в инфраструктуре.",
+    serviceFourOptionOneTitle: "Размещение сайта на сервере",
+    serviceFourOptionOnePrice: "запуск: от 500 ₽ до 1 500 ₽ · обслуживание: от 300 ₽ до 600 ₽/мес.",
+    serviceFourOptionOneText:
+      "Размещу готовый сайт на вашем сервере, подключу домен, HTTPS и проверю корректность запуска. При необходимости возьму дальнейшее техническое обслуживание.",
+    serviceFourOptionTwoTitle: "Размещение Telegram-бота на сервере",
+    serviceFourOptionTwoPrice: "запуск: от 1 000 ₽ до 2 500 ₽ · обслуживание: от 500 ₽ до 1 000 ₽/мес.",
+    serviceFourOptionTwoText:
+      "Настрою окружение, запуск и автоматический перезапуск бота на сервере, чтобы он работал постоянно и не зависел от домашнего компьютера.",
+    serviceFourOptionThreeTitle: "Сопровождение сайта",
+    serviceFourOptionThreePrice: "3 мес.: от 2 000 ₽ до 5 000 ₽ · 6 мес.: от 3 000 ₽ до 10 000 ₽ · 12 мес.: от 5 000 ₽ до 15 000 ₽",
+    serviceFourOptionThreeText:
+      "Контроль работоспособности, обновления, помощь с техническими вопросами и небольшими изменениями в течение выбранного периода.",
+    serviceFourOptionFourTitle: "Сопровождение Telegram-бота",
+    serviceFourOptionFourPrice: "3 мес.: от 2 500 ₽ до 6 000 ₽ · 6 мес.: от 4 000 ₽ до 10 000 ₽ · 12 мес.: от 5 000 ₽ до 15 000 ₽",
+    serviceFourOptionFourText:
+      "Контроль запуска и доступности, обновление зависимостей, помощь при сбоях и небольшие корректировки логики бота.",
+    serviceFourOptionFiveTitle: "Доработка существующего сайта или бота",
+    serviceFourOptionFivePrice: "цена договорная",
+    serviceFourOptionFiveText:
+      "Разберусь в существующем проекте, исправлю ошибки, добавлю нужные функции или помогу подготовить решение к дальнейшему развитию и стабильной работе.",
     projectsKicker: "Мои работы",
     projectsTitle: "Проекты",
     projectOneTitle: "Looking For Restaurants (LFRest)",
@@ -187,6 +210,29 @@ const translations = {
     serviceThreeOptionFourPrice: "custom",
     serviceThreeOptionFourText:
       "Full project development: from idea and structure discussion to implementation, setup, launch and preparation for future growth.",
+    serviceFourTitle: "Project launch and ongoing support",
+    serviceFourText:
+      "I help take a project beyond development and bring it to a stable launch: deploy a website or bot to a server, provide ongoing maintenance, or improve an existing solution. You get a ready-to-use project and technical support without having to manage the infrastructure yourself.",
+    serviceFourOptionOneTitle: "Website server deployment",
+    serviceFourOptionOnePrice: "launch: from 500 ₽ to 1,500 ₽ · maintenance: from 300 ₽ to 600 ₽/month",
+    serviceFourOptionOneText:
+      "I will deploy your finished website to your server, connect the domain and HTTPS, and verify that everything runs correctly. Ongoing technical maintenance is also available.",
+    serviceFourOptionTwoTitle: "Telegram bot server deployment",
+    serviceFourOptionTwoPrice: "launch: from 1,000 ₽ to 2,500 ₽ · maintenance: from 500 ₽ to 1,000 ₽/month",
+    serviceFourOptionTwoText:
+      "I will configure the environment, launch process and automatic restart so the bot stays online and does not depend on a home computer.",
+    serviceFourOptionThreeTitle: "Website maintenance",
+    serviceFourOptionThreePrice: "3 months: from 2,000 ₽ to 5,000 ₽ · 6 months: from 3,000 ₽ to 10,000 ₽ · 12 months: from 5,000 ₽ to 15,000 ₽",
+    serviceFourOptionThreeText:
+      "Availability checks, updates, help with technical issues and small website changes throughout the selected period.",
+    serviceFourOptionFourTitle: "Telegram bot maintenance",
+    serviceFourOptionFourPrice: "3 months: from 2,500 ₽ to 6,000 ₽ · 6 months: from 4,000 ₽ to 10,000 ₽ · 12 months: from 5,000 ₽ to 15,000 ₽",
+    serviceFourOptionFourText:
+      "Launch and availability checks, dependency updates, incident assistance and small adjustments to the bot logic.",
+    serviceFourOptionFiveTitle: "Improving an existing website or bot",
+    serviceFourOptionFivePrice: "custom price",
+    serviceFourOptionFiveText:
+      "I will review the existing project, fix issues, add the required features, or help prepare the solution for stable operation and future development.",
     projectsKicker: "My work",
     projectsTitle: "Projects",
     projectOneTitle: "Looking For Restaurants (LFRest)",
