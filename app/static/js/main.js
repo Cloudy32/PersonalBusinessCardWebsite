@@ -219,11 +219,20 @@ const translatableElements = document.querySelectorAll("[data-i18n]");
 const revealElements = document.querySelectorAll(".reveal-from-left, .reveal-from-right");
 
 function setLanguage(language) {
-  document.documentElement.lang = language;
+  const dictionary = translations[language] ?? translations.ru;
+  const resolvedLanguage = translations[language] ? language : "ru";
+
+  document.documentElement.lang = resolvedLanguage;
 
   translatableElements.forEach((element) => {
     const key = element.dataset.i18n;
-    element.innerHTML = translations[language][key];
+    const value = dictionary[key] ?? translations.ru[key];
+
+    if (typeof value === "string") {
+      element.innerHTML = value;
+    } else {
+      console.warn(`Missing translation: ${resolvedLanguage}.${key}`);
+    }
   });
 
   langButtons.forEach((button) => {
@@ -236,10 +245,12 @@ function setLanguage(language) {
 }
 
 function updateHeaderState() {
-  header.classList.toggle("is-scrolled", window.scrollY > 8);
+  header?.classList.toggle("is-scrolled", window.scrollY > 8);
 }
 
 function updateIntroScrollState() {
+  if (!introInner) return;
+
   const fadeDistance = Math.max(window.innerHeight * 0.48, 260);
   const progress = Math.min(window.scrollY / fadeDistance, 1);
   const opacity = Math.max(1 - progress * 1.25, 0);
@@ -250,13 +261,15 @@ function updateIntroScrollState() {
 }
 
 function replayIntroAnimation() {
-  [introTitle, introText].forEach((element) => {
+  const animatedElements = [introTitle, introText].filter(Boolean);
+
+  animatedElements.forEach((element) => {
     element.classList.remove("is-replaying");
     element.classList.add("replay-float");
   });
 
   requestAnimationFrame(() => {
-    [introTitle, introText].forEach((element) => {
+    animatedElements.forEach((element) => {
       element.classList.add("is-replaying");
     });
   });
@@ -278,7 +291,7 @@ langButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
-emailTrigger.addEventListener("click", async () => {
+emailTrigger?.addEventListener("click", async () => {
   emailTrigger.classList.toggle("is-open");
 
   try {
@@ -289,7 +302,7 @@ emailTrigger.addEventListener("click", async () => {
 });
 
 document.addEventListener("click", (event) => {
-  if (!emailTrigger.contains(event.target)) {
+  if (emailTrigger && !emailTrigger.contains(event.target)) {
     emailTrigger.classList.remove("is-open");
   }
 });

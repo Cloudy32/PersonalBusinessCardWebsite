@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf9f7" />
     <title>RB.code</title>
+    <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700;7..72,800&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/css/style.css?v=65" />
+    <link rel="stylesheet" href="static/css/style.css?v=75" />
   </head>
   <body>
     <header class="site-header" aria-label="Верхняя панель">
-      <a class="site-name" href="#intro" data-i18n="brand" aria-label="На начало страницы">RB.code</a>
+      <a class="site-name" href="#intro" aria-label="На начало страницы">
+        <img class="site-name-logo" src="static/images/favicon.svg" alt="" aria-hidden="true" />
+        <span data-i18n="brand">RB.code</span>
+      </a>
 
       <nav class="social-nav" aria-label="Контакты">
         <button class="social-link email-trigger" type="button" data-email="r.bondar29@gmail.com" aria-label="Показать почту">
@@ -75,16 +80,16 @@
           </div>
         </div>
 
-        <article class="about-copy reveal-from-right">
-          <h2 data-i18n="aboutTitle">Обо мне</h2>
+        <article class="about-copy">
+          <h2 class="reveal-from-right" data-i18n="aboutTitle">Обо мне</h2>
           <div class="about-text">
-            <div class="about-text-main">
+            <div class="about-text-main reveal-from-right">
               <p class="about-lead" data-i18n="aboutIntro">Привет! Меня зовут Рома 👋</p>
               <p data-i18n="aboutOrigin">Я родился на севере России, в Ханты-Мансийском автономном округе. Сейчас мне 23 года, я живу в более тёплой части России — в городе Брянск.</p>
               <p data-i18n="aboutDeveloperPath">Уже <strong>3,5 года</strong> я развиваюсь как <strong>Python Backend Developer</strong>. Сейчас я двигаюсь дальше не только как человек, который пишет код, а как личностный разработчик: создаю свои проекты, развиваю портфолио, делюсь опытом и выстраиваю вокруг себя профессиональный путь.</p>
               <p data-i18n="aboutStart"><strong>Мой путь в IT начался около 5 лет назад</strong>. Тогда я работал в небольшой компании и заполнял таблицы. В какой-то момент мне захотелось упростить рутинную работу. Именно тогда я заинтересовался автоматизацией и постепенно пришёл к программированию. Со временем я понял, разработка — это не просто “писать строчки кода” или нажимать кнопки. Это возможность <strong>создавать, упрощать и строить новые</strong> цифровые решения вокруг себя 🚀</p>
             </div>
-            <div class="about-text-under">
+            <div class="about-text-under reveal-from-left">
               
               <p data-i18n="aboutStackIntro">За это время я поработал с разными задачами и технологиями. Изначально мой стек был довольно простым: Python, ООП и Pandas. Сейчас он выглядит так:</p>
               <p class="about-stack" data-i18n="aboutStack">Python 3.12+, FastAPI, SQL, SQLAlchemy, Alembic, Redis, RabbitMQ, Celery, Git, CI/CD, а также библиотеки и фреймворки под конкретные задачи.</p>
@@ -95,7 +100,7 @@
           </div>
         </article>
 
-        <div class="photo-panel photo-panel-secondary reveal-from-left">
+        <div class="photo-panel photo-panel-secondary reveal-from-right">
           <img src="static/images/profile/my_photo_2.jpg" alt="Мое фото №2" />
           <div class="photo-callout photo-callout-right" aria-hidden="true">
             <span>Это тоже я</span>
@@ -260,6 +265,6 @@
       </section>
     </main>
 
-    <script src="static/js/main.js?v=22"></script>
+    <script src="static/js/main.js?v=23"></script>
   </body>
 </html>

@@ -76,6 +76,8 @@ python -m http.server 8001 --bind 127.0.0.1
 http://127.0.0.1:8001/index.html
 ```
 
+Запускайте сервер именно из папки `app`. Если запустить статический сервер из корня репозитория, служебные файлы проекта могут оказаться доступны по HTTP.
+
 Если нужно установить Python-зависимости из `requirements.txt`:
 
 ```bash
@@ -83,6 +85,27 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+## Безопасная публикация через nginx
+
+Публичным корнем должна быть только папка `app`, а не весь Git-репозиторий. Готовые настройки находятся в `deploy/nginx`:
+
+- `static-site.conf` задаёт безопасный document root, закрывает скрытые файлы и перенаправляет старые адреса страниц на секции одностраничного сайта;
+- `security-headers.conf` добавляет CSP, защиту от MIME-sniffing и встраивания, Referrer-Policy и Permissions-Policy.
+
+Подключите оба файла внутри существующего HTTPS-блока `server` для `rbcoder.ru`, затем проверьте конфигурацию и перезагрузите nginx:
+
+```nginx
+include /var/www/rbcode/deploy/nginx/static-site.conf;
+include /var/www/rbcode/deploy/nginx/security-headers.conf;
+```
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+Файлы сертификатов и текущие SSL-настройки менять не требуется.
 
 ## Статус проекта
 
