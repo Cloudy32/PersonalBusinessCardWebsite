@@ -1,6 +1,8 @@
 const translations = {
   ru: {
     brand: "RB.code",
+    navHome: "Главная",
+    navServices: "Услуги",
     introText:
       "Привет, ты попал на мой личный сайт-визитку. Тут ты сможешь ознакомиться со мной, моими услугами, проектами и надеюсь тебе понравиться.",
     aboutTitle: "Обо мне",
@@ -128,6 +130,8 @@ const translations = {
   },
   en: {
     brand: "RB.code",
+    navHome: "Home",
+    navServices: "Services",
     introText:
       "Hi, you are on my personal business card website. Here you can learn about me, my services, projects, and I hope you will enjoy it.",
     aboutTitle: "About me",
